@@ -1,0 +1,237 @@
+.inside {
+  width: 65%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
+}
+
+@font-face {
+  font-family: 'DINNextLTPro-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/Linotype - DINNextLTPro-Regular.otf') format('opentype');
+}
+
+body, html {
+   height:100%;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+a.image-link {
+  display: inline-block;
+  width: 100%;
+}
+
+
+/* The hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('/static/images/scatterplot.jpg');
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 75%;
+  left: 27.5%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.info{
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 1fr;
+}
+
+.left {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  margin-left: 20%;
+}
+.right {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.p1 {
+  font-family:  "DINNextLTPro-Regular",
+  serif; font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 19px;
+  color: #151B54;
+  word-spacing: 2px;
+}
+
+.title {
+  font-family: Georgia, Times, "Times New Roman",
+  serif; font-size: 82px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 84.4px;
+  margin-bottom: 1.5%;
+  color: white;
+}
+
+.h1 {
+  font-family: Georgia, Times, "Times New Roman",
+  serif; font-size: 32px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 32.4px;
+  margin-bottom: 1.5%;
+  color: #151B54;
+}
+.h2 {
+ font-family: "Brush Script MT", cursive;
+ font-size: 26px;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 700;
+ line-height: 26.4px;
+}
+.h3 {
+ font-family: "Brush Script MT", cursive;
+ font-size: 22px;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 700;
+ line-height: 2.4px;
+}
+
+.h4 {
+ font-family: "DINNextLTPro-Regular",
+ serif; font-size: 20px;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 200;
+ line-height: 18.4px;
+ margin-bottom: 4%;
+ color: gray;
+}
+
+.subtitle{
+ font-family: "Times New Roman";
+ font-size: 22px;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 700;
+ line-height: 24.4px;
+}
+
+.submit-button {
+  background: #016ABC;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow:none;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.submit-button:hover {
+  background: #66CDAA;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow:none;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+.list-inline {
+    list-style-type: none;
+    background: black;
+    display: block;
+    float: right;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+}
+
+li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-family: Georgia, Times, "Times New Roman",
+ serif; font-size: 18px;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 200;
+ line-height: 18.4px;
+}
+
+li a:hover:not(.active) {
+ border-bottom: 3px solid white;
+}
+
+li {
+ float: right;
+}
+
+li:last-child {
+ border-left: none;
+}
+
+.active {
+    border-bottom: 3px solid white;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+      grid-template-columns: auto;
+      grid-auto-rows: 1fr;
+    }
+    .inside {
+      width: 100%;
+    }
+    .hero-text {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 1094px) {
+    .list-inline {
+        width: 100%;
+    }
+}

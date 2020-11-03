@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+        <head>
+            <meta charset="utf-8">
+            <title>Uncountable</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scatter.css') }}" />
+        </head>
+        <body>
+          <div class="hero-image">
+            <ul id="navbar-list" class="list-inline">
+              <li class="active"><a href="{{ url_for('scatter') }}">Scatterplot</a></li>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+            <div class="hero-text">
+              <b> <span style='font-size:90px; color: #66CDAA; margin-bottom: 8px;'>&#9473;</span> </b>
+              <h1 class ="title">Scatterplot</h1>
+            </div>
+          </div>
+            <div class="row">
+              <div class="column left" >
+                <div class="inside">
+                  <b> <span style='font-size:50px; color: #66CDAA; margin-bottom: 8px;'>&#9473;</span> </b>
+                  <form action="/scatter" id="form-anchor" method="POST">
+                    <h3 style="margin-bottom: 20px"> Choose one input from this list: </h3>
+                    <select name="input">
+                      <option value="Polymer 1" selected>Polymer 1</option>
+                      <option value="Polymer 2">Polymer 2</option>
+                      <option value="Polymer 3">Polymer 3</option>
+                      <option value="Polymer 4">Polymer 4</option>
+                      <option value="Carbon Black High Grade">Carbon Black High Grade</option>
+                      <option value="Carbon Black Low Grade">Carbon Black Low Grade</option>
+                      <option value="Silica Filler 1">Silica Filler 1</option>
+                      <option value="Silica Filler 2">Silica Filler 2</option>
+                      <option value="Plasticizer 1">Plasticizer 1</option>
+                      <option value="Plasticizer 2">Plasticizer 2</option>
+                      <option value="Plasticizer 3">Plasticizer 3</option>
+                      <option value="Antioxidant">Antioxidant</option>
+                      <option value="Coloring Pigment">Coloring Pigment</option>
+                      <option value="Co-Agent 1">Co-Agent 1</option>
+                      <option value="Co-Agent 2">Co-Agent 2</option>
+                      <option value="Co-Agent 3">Co-Agent 3</option>
+                      <option value="Curing Agent 1">Curing Agent 1</option>
+                      <option value="Curing Agent 2">Curing Agent 2</option>
+                      <option value="Oven Temperature">Oven Temperature</option>
+                    </select>
+                    <h3 style="margin-top: 20px; margin-bottom: 20px"> Choose one output from this list: </h3>
+                    <select name="output">
+                      <option value="Viscosity" selected>Viscosity</option>
+                      <option value="Cure Time">Cure Time</option>
+                      <option value="Elongation">Elongation</option>
+                      <option value="Tensile Strength">Tensile Strength</option>
+                      <option value="Compression Set">Compression Set</option>
+                    </select>
+                    <input class="submit-button" type="submit" value="Submit">
+                  </form>
+               </div>
+             </div>
+             <div class="column right" >
+               <div class="inside">
+                 {% if plot %}
+                 <div>
+                   {{ plot|safe }}
+                 </div>
+                 {% endif %}
+               </div>
+             </div>
+           </div>
+         </body>
+    </html>

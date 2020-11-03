@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+        <head>
+            <meta charset="utf-8">
+            <title>Uncountable</title>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+        </head>
+        <body>
+          <div class="hero-image">
+            <ul id="navbar-list" class="list-inline">
+              <li><a href="{{ url_for('scatter') }}">Scatterplot</a></li>
+              <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+            <div class="hero-text">
+              <b> <span style='font-size:90px; color: #66CDAA; margin-bottom: 8px;'>&#9473;</span> </b>
+              <h1 class ="title" style="margin-bottom:5%">Uncountable</h1>
+              <h1 class ="subtitle">Explore Lab Data like Never Before</h1>
+            </div>
+          </div>
+            <div class="row" style="margin-bottom: 20px">
+             <div class="column left"><a class="image-link" style="text-align: center" target="_blank" ><img src="{{ url_for('static', filename='images/scatterplot.png') }}" height=60%, width=60%></a></div>
+             <div class="column right">
+               <div class="inside">
+                 <b> <span style='font-size:50px; color: #66CDAA; margin-bottom: 8px;'>&#9473;</span> </b>
+                 <h3 class="h1">Scatterplot </h1>
+                 <br>
+                 <br>
+                 <p class="p1">On the scatterplot page, you can select one input and one output field to visualize lab data from your experiments as scatterplots.  </p>
+                 <br>
+                 <br>
+                 <p class = "p1" > <a class="button" href="{{url_for('scatter')}}"> Scatterplot </a> </p>
+               </div>
+             </div>
+           </div>
+        </body>
+    </html>
