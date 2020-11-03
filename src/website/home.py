@@ -43,6 +43,8 @@ def home():
 @app.route("/scatter", methods=['GET', 'POST'])
 def scatter():
     if request.method == 'POST':
+        cur = None
+        conn = None
         try:
             conn = psycopg2.connect("host=localhost dbname=uncountable user=vikas")
             cur = conn.cursor()
